@@ -1,14 +1,23 @@
 package visitka.service.pages.startPage;
 
+import lombok.NonNull;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod;
-import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
+import org.telegram.telegrambots.meta.api.methods.send.SendPhoto;
+import org.telegram.telegrambots.meta.api.objects.InputFile;
 import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import utils.messages.MessageBuilder;
+import utils.messages.keyboard.InlineKeyboardBuilder;
 import utils.pages.interfaces.Page;
+import visitka.utils.Emoji;
 
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,14 +26,29 @@ public class StartPage implements Page {
 
     public static final String NAME = "/start";
 
+    private final String text = "Привет, это пример телеграм-бота, который я могу сделать. " + Emoji.BANANA.emoji();
+
+    private final Logger logger = LogManager.getLogger();
+
     @Override
     public List<PartialBotApiMethod<Message>> execute(Update update) throws TelegramApiException {
-        String text = "Hello";
-        List<SendMessage> messages = new ArrayList<>();
+        logger.info("{} вызвал команду /start", update.getMessage().getChat().getUserName());
+        List<SendPhoto> messages = new ArrayList<>();
         MessageBuilder messageBuilder = new MessageBuilder();
+        InlineKeyboardBuilder keyboardBuilder = new InlineKeyboardBuilder();
 
-        messages.add(messageBuilder.createTextMessage
-                (null, update.getMessage().getChatId(), text));
+        InputStream inputStream = StartPage.class.getResourceAsStream("/pics/banana-rob.jpg");
+        InputFile picture;
+
+        try {
+            assert inputStream != null;
+            picture = new InputFile(new ByteArrayInputStream(inputStream.readAllBytes()), "file");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        messages.add(messageBuilder.createPhotoMessage
+                (keyboardBuilder.addButton(Emoji.MINUS.emoji(), "/start").nextRow().build(), update.getMessage().getChatId(), text, picture));
 
         return messages.stream().map(e -> (PartialBotApiMethod<Message>) e).toList();
     }

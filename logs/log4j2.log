@@ -1,48 +1,41 @@
-2025-07-19 17:37:01,238 INFO v.Main [main] dsadsa
-2025-07-19 17:38:01,060 INFO v.Main [main] dsadsa2025-07-19 19:20:29,782 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 16380 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
-2025-07-19 19:20:29,784 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
-2025-07-19 19:20:30,752 INFO v.Application [main] Started Application in 1.3 seconds (process running for 1.777)
-2025-07-19 19:34:20,100 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 20924 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
-2025-07-19 19:34:20,103 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
-2025-07-19 19:34:21,133 INFO v.Application [main] Started Application in 1.366 seconds (process running for 1.863)
-2025-07-19 19:35:11,727 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 13908 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
-2025-07-19 19:35:11,729 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
-2025-07-19 19:35:12,701 INFO v.Application [main] Started Application in 1.309 seconds (process running for 1.778)
-2025-07-19 19:35:14,499 ERROR o.t.t.u.DefaultBotSession [vvisitka_bot Telegram Executor] Cannot invoke "utils.pages.interfaces.Page.execute(org.telegram.telegrambots.meta.api.objects.Update)" because the return value of "java.util.Map.get(Object)" is null
-java.lang.NullPointerException: Cannot invoke "utils.pages.interfaces.Page.execute(org.telegram.telegrambots.meta.api.objects.Update)" because the return value of "java.util.Map.get(Object)" is null
-	at visitka.service.pages.PagesManager.execute(PagesManager.java:28) ~[classes/:?]
-	at visitka.service.VisitkaBot.processMessage(VisitkaBot.java:49) ~[classes/:?]
-	at visitka.service.VisitkaBot.onUpdateReceived(VisitkaBot.java:39) ~[classes/:?]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[?:?]
-	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.9.0.jar:?]
-	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) [telegrambots-6.9.0.jar:?]
-2025-07-19 19:36:09,983 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 9500 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
-2025-07-19 19:36:09,985 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
-2025-07-19 19:36:10,966 WARN o.s.c.a.AnnotationConfigApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'visitka.service.pages.startPage.StartPage' available
-2025-07-19 19:36:10,969 INFO o.s.b.a.l.ConditionEvaluationReportLogger [main] 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-07-19 19:36:10,982 ERROR o.s.b.d.LoggingFailureAnalysisReporter [main] 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-A component required a bean of type 'visitka.service.pages.startPage.StartPage' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'visitka.service.pages.startPage.StartPage' in your configuration.
-
-2025-07-19 19:36:27,678 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 8500 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
-2025-07-19 19:36:27,681 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
-2025-07-19 19:36:28,669 INFO v.Application [main] Started Application in 1.314 seconds (process running for 1.802)
-2025-07-19 19:36:45,893 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 3800 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
-2025-07-19 19:36:45,895 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
-2025-07-19 19:36:46,882 INFO v.Application [main] Started Application in 1.316 seconds (process running for 1.817)
-2025-07-19 19:38:16,515 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 12456 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
-2025-07-19 19:38:16,518 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
-2025-07-19 19:38:17,499 INFO v.Application [main] Started Application in 1.304 seconds (process running for 1.789)
+2025-07-20 00:49:24,078 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 7876 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-20 00:49:24,090 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-20 00:49:25,435 INFO v.Application [main] Started Application in 1.831 seconds (process running for 2.557)
+2025-07-20 00:49:32,156 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 10728 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-20 00:49:32,161 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-20 00:49:33,176 INFO v.Application [main] Started Application in 1.4 seconds (process running for 1.973)
+2025-07-20 00:51:30,002 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 20184 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-20 00:51:30,005 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-20 00:51:31,060 INFO v.Application [main] Started Application in 1.414 seconds (process running for 1.932)
+2025-07-20 00:52:43,600 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 15884 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-20 00:52:43,603 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-20 00:52:44,609 INFO v.Application [main] Started Application in 1.337 seconds (process running for 1.848)
+2025-07-20 00:54:28,438 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 9400 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-20 00:54:28,441 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-20 00:54:29,460 INFO v.Application [main] Started Application in 1.35 seconds (process running for 1.851)
+2025-07-20 00:54:50,339 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 20724 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-20 00:54:50,341 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-20 00:54:51,358 INFO v.Application [main] Started Application in 1.389 seconds (process running for 1.89)
+2025-07-20 00:55:42,995 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 6456 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-20 00:55:42,998 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-20 00:55:44,074 INFO v.Application [main] Started Application in 1.459 seconds (process running for 1.947)
+2025-07-20 00:56:08,156 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 2872 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-20 00:56:08,159 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-20 00:56:09,212 INFO v.Application [main] Started Application in 1.394 seconds (process running for 1.884)
+2025-07-20 00:56:25,294 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 2068 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-20 00:56:25,297 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-20 00:56:26,367 INFO v.Application [main] Started Application in 1.41 seconds (process running for 1.908)
+2025-07-20 01:19:48,546 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 4920 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-20 01:19:48,549 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-20 01:19:50,776 INFO v.Application [main] Started Application in 2.971 seconds (process running for 3.632)
+2025-07-20 01:20:06,691 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 20180 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-20 01:20:06,693 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-20 01:20:07,751 INFO v.Application [main] Started Application in 1.391 seconds (process running for 1.905)
+2025-07-20 01:22:46,149 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 12948 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-20 01:22:46,152 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-20 01:22:47,472 INFO v.Application [main] Started Application in 2.046 seconds (process running for 2.74)
+2025-07-20 01:22:59,951 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал команду /start
+2025-07-20 01:23:42,030 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 12680 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-20 01:23:42,033 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-20 01:23:43,088 INFO v.Application [main] Started Application in 1.394 seconds (process running for 1.883)
+2025-07-20 01:23:46,060 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал команду /start
