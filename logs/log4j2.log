@@ -1,0 +1,48 @@
+2025-07-19 17:37:01,238 INFO v.Main [main] dsadsa
+2025-07-19 17:38:01,060 INFO v.Main [main] dsadsa2025-07-19 19:20:29,782 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 16380 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-19 19:20:29,784 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-19 19:20:30,752 INFO v.Application [main] Started Application in 1.3 seconds (process running for 1.777)
+2025-07-19 19:34:20,100 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 20924 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-19 19:34:20,103 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-19 19:34:21,133 INFO v.Application [main] Started Application in 1.366 seconds (process running for 1.863)
+2025-07-19 19:35:11,727 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 13908 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-19 19:35:11,729 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-19 19:35:12,701 INFO v.Application [main] Started Application in 1.309 seconds (process running for 1.778)
+2025-07-19 19:35:14,499 ERROR o.t.t.u.DefaultBotSession [vvisitka_bot Telegram Executor] Cannot invoke "utils.pages.interfaces.Page.execute(org.telegram.telegrambots.meta.api.objects.Update)" because the return value of "java.util.Map.get(Object)" is null
+java.lang.NullPointerException: Cannot invoke "utils.pages.interfaces.Page.execute(org.telegram.telegrambots.meta.api.objects.Update)" because the return value of "java.util.Map.get(Object)" is null
+	at visitka.service.pages.PagesManager.execute(PagesManager.java:28) ~[classes/:?]
+	at visitka.service.VisitkaBot.processMessage(VisitkaBot.java:49) ~[classes/:?]
+	at visitka.service.VisitkaBot.onUpdateReceived(VisitkaBot.java:39) ~[classes/:?]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[?:?]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.9.0.jar:?]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) [telegrambots-6.9.0.jar:?]
+2025-07-19 19:36:09,983 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 9500 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-19 19:36:09,985 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-19 19:36:10,966 WARN o.s.c.a.AnnotationConfigApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'visitka.service.pages.startPage.StartPage' available
+2025-07-19 19:36:10,969 INFO o.s.b.a.l.ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-19 19:36:10,982 ERROR o.s.b.d.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean of type 'visitka.service.pages.startPage.StartPage' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'visitka.service.pages.startPage.StartPage' in your configuration.
+
+2025-07-19 19:36:27,678 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 8500 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-19 19:36:27,681 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-19 19:36:28,669 INFO v.Application [main] Started Application in 1.314 seconds (process running for 1.802)
+2025-07-19 19:36:45,893 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 3800 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-19 19:36:45,895 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-19 19:36:46,882 INFO v.Application [main] Started Application in 1.316 seconds (process running for 1.817)
+2025-07-19 19:38:16,515 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 12456 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-19 19:38:16,518 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-19 19:38:17,499 INFO v.Application [main] Started Application in 1.304 seconds (process running for 1.789)
