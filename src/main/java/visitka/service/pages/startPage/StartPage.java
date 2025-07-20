@@ -30,12 +30,19 @@ public class StartPage implements Page {
 
     private final Logger logger = LogManager.getLogger();
 
+
     @Override
     public List<PartialBotApiMethod<Message>> execute(Update update) throws TelegramApiException {
         logger.info("{} вызвал команду /start", update.getMessage().getChat().getUserName());
         List<SendPhoto> messages = new ArrayList<>();
         MessageBuilder messageBuilder = new MessageBuilder();
         InlineKeyboardBuilder keyboardBuilder = new InlineKeyboardBuilder();
+
+        keyboardBuilder = keyboardBuilder
+                .addButton(Emoji.SMIRK.emoji() + " Скинь меня кому-нибудь", "/share").nextRow()
+                .addButton(Emoji.MAN_DANCING.emoji() + " Во че еще могу", "/invest").nextRow()
+                .addButton(Emoji.LINKED_PAPERCLIPS.emoji() + " Подписаться", "/sub").nextRow()
+                .addButton(Emoji.GAME_DIE.emoji() + " Кубики", "/cubes").nextRow();
 
         InputStream inputStream = StartPage.class.getResourceAsStream("/pics/banana-rob.jpg");
         InputFile picture;
@@ -48,7 +55,36 @@ public class StartPage implements Page {
         }
 
         messages.add(messageBuilder.createPhotoMessage
-                (keyboardBuilder.addButton(Emoji.MINUS.emoji(), "/start").nextRow().build(), update.getMessage().getChatId(), text, picture));
+                (keyboardBuilder.build(), update.getMessage().getChatId(), text, picture));
+
+        return messages.stream().map(e -> (PartialBotApiMethod<Message>) e).toList();
+    }
+
+    @Override
+    public List<PartialBotApiMethod<Message>> executeCallback(Update update) throws TelegramApiException {
+        logger.info("{} вызвал через кнопку команду /start", update.getCallbackQuery().getMessage().getChat().getUserName());
+        List<SendPhoto> messages = new ArrayList<>();
+        MessageBuilder messageBuilder = new MessageBuilder();
+        InlineKeyboardBuilder keyboardBuilder = new InlineKeyboardBuilder();
+
+        keyboardBuilder = keyboardBuilder
+                .addButton(Emoji.SMIRK.emoji() + " Скинь меня кому-нибудь", "/share").nextRow()
+                .addButton(Emoji.MAN_DANCING.emoji() + " Во че еще могу", "/invest").nextRow()
+                .addButton(Emoji.LINKED_PAPERCLIPS.emoji() + " Подписаться", "/sub").nextRow()
+                .addButton(Emoji.GAME_DIE.emoji() + " Кубики", "/cubes").nextRow();
+
+        InputStream inputStream = StartPage.class.getResourceAsStream("/pics/banana-rob.jpg");
+        InputFile picture;
+
+        try {
+            assert inputStream != null;
+            picture = new InputFile(new ByteArrayInputStream(inputStream.readAllBytes()), "file");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        messages.add(messageBuilder.createPhotoMessage
+                (keyboardBuilder.build(), update.getCallbackQuery().getMessage().getChatId(), text, picture));
 
         return messages.stream().map(e -> (PartialBotApiMethod<Message>) e).toList();
     }

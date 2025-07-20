@@ -10,9 +10,12 @@ import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import utils.pages.PageManager;
+import visitka.service.pages.cubesPage.CubesPage;
 import visitka.service.pages.startPage.StartPage;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Component
 public class PagesManager extends PageManager {
@@ -25,25 +28,51 @@ public class PagesManager extends PageManager {
     @EventListener(ContextRefreshedEvent.class)
     protected void setupPages() {
         addPage(StartPage.NAME, context.getBean(StartPage.class));
+        addPage(CubesPage.NAME, context.getBean(CubesPage.class));
     }
+
+    private final Map<Long, String> lastCalledPageByUser = new HashMap<>();
 
     @Override
     public List<PartialBotApiMethod<Message>> execute(Update update, String pageName) throws TelegramApiException {
+        long chatId = update.getMessage().getChatId();
+        pageName = getPageName(pageName, chatId);
+
         return pages.get(pageName).execute(update);
     }
 
     @Override
     public List<PartialBotApiMethod<Message>> executeWithArgs(Update update, String pageName, String... args) throws TelegramApiException {
-        return null;
+        long chatId = update.getMessage().getChatId();
+        pageName = getPageName(pageName, chatId);
+
+        return pages.get(pageName).executeWithArgs(update, args);
     }
 
     @Override
     public List<PartialBotApiMethod<Message>> executeCallback(Update update, String pageName) throws TelegramApiException {
-        return null;
+        long chatId = update.getCallbackQuery().getMessage().getChatId();
+        pageName = getPageName(pageName, chatId);
+
+        return pages.get(pageName).executeCallback(update);
     }
 
     @Override
     public List<PartialBotApiMethod<Message>> executeCallbackWithArgs(Update update, String pageName, String... args) throws TelegramApiException {
-        return null;
+        long chatId = update.getCallbackQuery().getMessage().getChatId();
+        pageName = getPageName(pageName, chatId);
+
+        return pages.get(pageName).executeCallbackWithArgs(update, args);
+    }
+
+
+    private String getPageName(String pageName, long chatId){
+        if(!pageName.isEmpty()){
+            if(!lastCalledPageByUser.containsKey(chatId)) lastCalledPageByUser.put(chatId, pageName);
+            else lastCalledPageByUser.replace(chatId, pageName);
+        }
+        else pageName = lastCalledPageByUser.get(chatId);
+
+        return pageName;
     }
 }
