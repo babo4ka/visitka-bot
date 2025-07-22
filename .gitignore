@@ -39,4 +39,5 @@ build/
 
 
 /src/main/resources/tg.properties
+/src/main/resources/invest.properties
 /src/main/resources/log4j2-spring.xml

@@ -11,6 +11,7 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import utils.pages.PageManager;
 import visitka.service.pages.cubesPage.CubesPage;
+import visitka.service.pages.investPage.InvestPage;
 import visitka.service.pages.startPage.StartPage;
 
 import java.util.HashMap;
@@ -29,6 +30,7 @@ public class PagesManager extends PageManager {
     protected void setupPages() {
         addPage(StartPage.NAME, context.getBean(StartPage.class));
         addPage(CubesPage.NAME, context.getBean(CubesPage.class));
+        addPage(InvestPage.NAME, context.getBean(InvestPage.class));
     }
 
     private final Map<Long, String> lastCalledPageByUser = new HashMap<>();
