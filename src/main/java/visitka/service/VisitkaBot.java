@@ -1,6 +1,8 @@
 package visitka.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod;
@@ -10,13 +12,17 @@ import org.telegram.telegrambots.meta.api.methods.send.SendPhoto;
 import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
+import utils.messages.MessageBuilder;
 import visitka.config.BotConfig;
 import visitka.service.pages.PagesManager;
+import visitka.service.pages.subscribePage.SubsDataBase;
+import visitka.utils.Emoji;
 
 import java.util.Arrays;
 import java.util.List;
 
 @Component
+@EnableScheduling
 public class VisitkaBot extends TelegramLongPollingBot {
 
     final BotConfig config;
@@ -108,5 +114,24 @@ public class VisitkaBot extends TelegramLongPollingBot {
             else if(message instanceof SendPhoto) execute((SendPhoto) message);
             else if (message instanceof SendDice) execute((SendDice) message);
         }
+    }
+
+
+
+    @Scheduled(fixedRate = 15000)
+    private void sendMessagesToSubs(){
+        MessageBuilder messageBuilder = new MessageBuilder();
+
+        SubsDataBase.getSubs().forEach(id -> {
+            SendMessage message = messageBuilder.createTextMessage(null, id, "Ты подписан, держи " + Emoji.PLEADING_FACE.emoji() + "\n"
+            + "Будет каждые 15 секунд отправляться!");
+
+            try {
+                execute(message);
+            } catch (TelegramApiException e) {
+                throw new RuntimeException(e);
+            }
+        });
+
     }
 }

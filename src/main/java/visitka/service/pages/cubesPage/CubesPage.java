@@ -45,7 +45,7 @@ public class CubesPage implements Page {
 
         keyboardBuilder = keyboardBuilder.addButton("Дальше " + Emoji.CLOWN_FACE.emoji(), "/cubes 2").nextRow();
 
-        InputStream inputStream = StartPage.class.getResourceAsStream("/pics/mncrft.jpg");
+        InputStream inputStream = CubesPage.class.getResourceAsStream("/pics/mncrft.jpg");
         InputFile picture;
 
         try {

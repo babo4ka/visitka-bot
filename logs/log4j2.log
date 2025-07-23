@@ -1,10 +1,10 @@
-2025-07-22 21:39:57,469 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 6020 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
-2025-07-22 21:39:57,478 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
-2025-07-22 21:39:59,273 WARN o.s.c.a.AnnotationConfigApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'visitka.service.pages.investPage.InvestPage' available
-2025-07-22 21:39:59,275 INFO o.s.b.a.l.ConditionEvaluationReportLogger [main] 
+2025-07-23 21:26:30,905 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 23548 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-23 21:26:30,915 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-23 21:26:33,236 WARN o.s.c.a.AnnotationConfigApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'visitka.service.pages.subscribePage.SubscribePage' available
+2025-07-23 21:26:33,239 INFO o.s.b.a.l.ConditionEvaluationReportLogger [main] 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-07-22 21:39:59,292 ERROR o.s.b.d.LoggingFailureAnalysisReporter [main] 
+2025-07-23 21:26:33,255 ERROR o.s.b.d.LoggingFailureAnalysisReporter [main] 
 
 ***************************
 APPLICATION FAILED TO START
@@ -12,73 +12,38 @@ APPLICATION FAILED TO START
 
 Description:
 
-A component required a bean of type 'visitka.service.pages.investPage.InvestPage' that could not be found.
+A component required a bean of type 'visitka.service.pages.subscribePage.SubscribePage' that could not be found.
 
 
 Action:
 
-Consider defining a bean of type 'visitka.service.pages.investPage.InvestPage' in your configuration.
+Consider defining a bean of type 'visitka.service.pages.subscribePage.SubscribePage' in your configuration.
 
-2025-07-22 21:40:16,721 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 17244 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
-2025-07-22 21:40:16,724 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
-2025-07-22 21:40:18,096 INFO v.Application [main] Started Application in 1.699 seconds (process running for 2.218)
-2025-07-22 21:40:54,203 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал команду /start
-2025-07-22 21:40:56,406 ERROR o.t.t.u.DefaultBotSession [vvisitka_bot Telegram Executor] Cannot invoke "org.telegram.telegrambots.meta.api.objects.Message.getChat()" because the return value of "org.telegram.telegrambots.meta.api.objects.Update.getMessage()" is null
-java.lang.NullPointerException: Cannot invoke "org.telegram.telegrambots.meta.api.objects.Message.getChat()" because the return value of "org.telegram.telegrambots.meta.api.objects.Update.getMessage()" is null
-	at visitka.service.pages.investPage.InvestPage.executeCallback(InvestPage.java:39) ~[classes/:?]
-	at visitka.service.pages.PagesManager.executeCallback(PagesManager.java:59) ~[classes/:?]
-	at visitka.service.VisitkaBot.processCallback(VisitkaBot.java:98) ~[classes/:?]
-	at visitka.service.VisitkaBot.onUpdateReceived(VisitkaBot.java:49) ~[classes/:?]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[?:?]
-	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.9.0.jar:?]
-	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) [telegrambots-6.9.0.jar:?]
-2025-07-22 21:41:14,501 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 19420 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
-2025-07-22 21:41:14,504 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
-2025-07-22 21:41:15,877 INFO v.Application [main] Started Application in 1.692 seconds (process running for 2.207)
-2025-07-22 21:41:18,156 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал команду /start
-2025-07-22 21:41:20,194 INFO v.s.p.i.InvestPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /invest
-2025-07-22 21:41:28,217 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал команду /start
-2025-07-22 21:41:30,627 INFO v.s.p.i.InvestPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /invest
-2025-07-22 21:43:41,466 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 7344 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
-2025-07-22 21:43:41,469 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
-2025-07-22 21:43:42,882 INFO v.Application [main] Started Application in 1.735 seconds (process running for 2.254)
-2025-07-22 21:43:49,437 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал команду /start
-2025-07-22 21:43:51,068 INFO v.s.p.i.InvestPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /invest
-2025-07-22 21:43:51,460 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил информацию по MOEX: MOEX
-Московская Биржа
-179.35
-2025-07-22 21:59:11,920 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 13760 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
-2025-07-22 21:59:11,923 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
-2025-07-22 21:59:13,622 INFO v.Application [main] Started Application in 2.099 seconds (process running for 2.736)
-2025-07-22 21:59:43,423 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал команду /start
-2025-07-22 21:59:44,801 INFO v.s.p.i.InvestPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /invest
-2025-07-22 21:59:45,245 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил свечи по TATNP, количество: 169
-2025-07-22 21:59:45,376 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил информацию по TATNP:
- TATNP
-Татнефть - привилегированные акции
-632.2
-2025-07-22 21:59:45,384 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил серию баров по TATNP, количество: 169
-2025-07-22 22:00:25,960 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 20080 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
-2025-07-22 22:00:25,962 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
-2025-07-22 22:00:27,329 INFO v.Application [main] Started Application in 1.69 seconds (process running for 2.208)
-2025-07-22 22:00:32,498 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
-2025-07-22 22:00:34,519 INFO v.s.p.i.InvestPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /invest
-2025-07-22 22:00:34,877 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил свечи по MOEX, количество: 171
-2025-07-22 22:00:34,996 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил информацию по MOEX:
- MOEX
-Московская Биржа
-179.34
-2025-07-22 22:00:35,004 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил серию баров по MOEX, количество: 171
-2025-07-22 22:00:43,877 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
-2025-07-22 22:00:45,933 ERROR o.t.t.u.DefaultBotSession [vvisitka_bot Telegram Executor] Cannot invoke "utils.pages.interfaces.Page.executeCallback(org.telegram.telegrambots.meta.api.objects.Update)" because the return value of "java.util.Map.get(Object)" is null
-java.lang.NullPointerException: Cannot invoke "utils.pages.interfaces.Page.executeCallback(org.telegram.telegrambots.meta.api.objects.Update)" because the return value of "java.util.Map.get(Object)" is null
-	at visitka.service.pages.PagesManager.executeCallback(PagesManager.java:59) ~[classes/:?]
-	at visitka.service.VisitkaBot.processCallback(VisitkaBot.java:98) ~[classes/:?]
-	at visitka.service.VisitkaBot.onUpdateReceived(VisitkaBot.java:49) ~[classes/:?]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[?:?]
-	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.9.0.jar:?]
-	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) [telegrambots-6.9.0.jar:?]
-2025-07-22 22:00:47,868 INFO v.s.p.c.CubesPage [vvisitka_bot Telegram Executor] 268932900 вызвал через кнопку команду /cubes
-2025-07-22 22:00:51,483 INFO v.s.p.c.CubesPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /cubes с аргументами [2]
-2025-07-22 22:00:56,198 INFO v.s.p.c.CubesPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /cubes с аргументами [2]
-2025-07-22 22:00:57,489 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-23 21:26:51,295 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 23928 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-23 21:26:51,299 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-23 21:26:52,720 INFO v.Application [main] Started Application in 1.775 seconds (process running for 2.323)
+2025-07-23 21:26:55,805 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал команду /start
+2025-07-23 21:26:57,681 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [1]
+2025-07-23 21:27:01,176 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-23 21:27:03,427 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [0]
+2025-07-23 21:27:05,486 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-23 21:27:07,631 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [1]
+2025-07-23 21:27:10,559 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-23 21:28:25,067 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 22424 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-23 21:28:25,070 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-23 21:28:26,465 INFO v.Application [main] Started Application in 1.717 seconds (process running for 2.234)
+2025-07-23 21:28:32,023 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал команду /start
+2025-07-23 21:28:33,448 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [1]
+2025-07-23 21:28:34,419 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-23 21:28:36,894 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [0]
+2025-07-23 21:28:39,270 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-23 21:33:13,047 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 22716 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-23 21:33:13,050 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-23 21:33:14,714 INFO v.Application [main] Started Application in 2.073 seconds (process running for 2.86)
+2025-07-23 21:33:23,622 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 24200 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-23 21:33:23,625 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-23 21:33:25,034 INFO v.Application [main] Started Application in 1.732 seconds (process running for 2.285)
+2025-07-23 21:33:35,593 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [1]
+2025-07-23 21:33:36,879 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-23 21:33:44,458 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [0]
+2025-07-23 21:33:45,786 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start

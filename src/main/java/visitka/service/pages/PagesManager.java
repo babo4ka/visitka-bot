@@ -13,6 +13,7 @@ import utils.pages.PageManager;
 import visitka.service.pages.cubesPage.CubesPage;
 import visitka.service.pages.investPage.InvestPage;
 import visitka.service.pages.startPage.StartPage;
+import visitka.service.pages.subscribePage.SubscribePage;
 
 import java.util.HashMap;
 import java.util.List;
@@ -31,6 +32,7 @@ public class PagesManager extends PageManager {
         addPage(StartPage.NAME, context.getBean(StartPage.class));
         addPage(CubesPage.NAME, context.getBean(CubesPage.class));
         addPage(InvestPage.NAME, context.getBean(InvestPage.class));
+        addPage(SubscribePage.NAME, context.getBean(SubscribePage.class));
     }
 
     private final Map<Long, String> lastCalledPageByUser = new HashMap<>();

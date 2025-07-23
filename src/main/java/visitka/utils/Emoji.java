@@ -12,6 +12,9 @@ public enum Emoji {
     GAME_DIE(":game_die:"),
     FACE_WITH_SYMBOLS_ON_MOUTH(":face_with_symbols_on_mouth:"),
     CLOWN_FACE(":clown_face:"),
+    SWEAT(":sweat:"),
+    OPEN_MOUTH(":open_mouth:"),
+    PLEADING_FACE(":pleading_face:"),
     SOB(":sob:"),
     UNAMUSED(":unamused:"),
     BANANA(":banana:");

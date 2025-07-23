@@ -13,6 +13,7 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import utils.messages.MessageBuilder;
 import utils.messages.keyboard.InlineKeyboardBuilder;
 import utils.pages.interfaces.Page;
+import visitka.service.pages.subscribePage.SubsDataBase;
 import visitka.utils.Emoji;
 
 import java.io.ByteArrayInputStream;
@@ -41,7 +42,9 @@ public class StartPage implements Page {
         keyboardBuilder = keyboardBuilder
                 .addButton(Emoji.SMIRK.emoji() + " Скинь меня кому-нибудь", "/share").nextRow()
                 .addButton(Emoji.MAN_DANCING.emoji() + " Во че еще могу", "/invest").nextRow()
-                .addButton(Emoji.LINKED_PAPERCLIPS.emoji() + " Подписаться", "/sub").nextRow()
+                .addButton(Emoji.LINKED_PAPERCLIPS.emoji() +
+                        (SubsDataBase.contains(update.getMessage().getChatId())?" Отписаться":" Подписаться"),
+                        "/sub " + (SubsDataBase.contains(update.getMessage().getChatId())?"0":"1")).nextRow()
                 .addButton(Emoji.GAME_DIE.emoji() + " Кубики", "/cubes").nextRow();
 
         InputStream inputStream = StartPage.class.getResourceAsStream("/pics/banana-rob.jpg");
@@ -70,7 +73,9 @@ public class StartPage implements Page {
         keyboardBuilder = keyboardBuilder
                 .addButton(Emoji.SMIRK.emoji() + " Скинь меня кому-нибудь", "/share").nextRow()
                 .addButton(Emoji.MAN_DANCING.emoji() + " Во че еще могу", "/invest").nextRow()
-                .addButton(Emoji.LINKED_PAPERCLIPS.emoji() + " Подписаться", "/sub").nextRow()
+                .addButton(Emoji.LINKED_PAPERCLIPS.emoji() +
+                        (SubsDataBase.contains(update.getCallbackQuery().getMessage().getChatId())?" Отписаться":" Подписаться"),
+                        "/sub " + (SubsDataBase.contains(update.getCallbackQuery().getMessage().getChatId())?"0":"1")).nextRow()
                 .addButton(Emoji.GAME_DIE.emoji() + " Кубики", "/cubes").nextRow();
 
         InputStream inputStream = StartPage.class.getResourceAsStream("/pics/banana-rob.jpg");
