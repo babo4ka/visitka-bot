@@ -10,6 +10,7 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import utils.messages.MessageBuilder;
 import utils.messages.keyboard.InlineKeyboardBuilder;
 import utils.pages.interfaces.Page;
+import utils.tuples.Pair;
 import visitka.utils.Emoji;
 
 import java.util.List;
@@ -29,7 +30,7 @@ public class SubscribePage implements Page {
     final String negativeText = "Отписался " + Emoji.OPEN_MOUTH.emoji();
 
     @Override
-    public List<PartialBotApiMethod<Message>> executeCallbackWithArgs(Update update, String... args) {
+    public List<Pair<PartialBotApiMethod<Message>, Boolean>> executeCallbackWithArgs(Update update, String... args) {
         logger.info("{} вызвал через кнопку команду /sub с аргуметами {}",
                 update.getCallbackQuery().getMessage().getChat().getUserName(), args);
 
@@ -47,6 +48,6 @@ public class SubscribePage implements Page {
                 args[0].equals("1")?text:negativeText);
 
 
-        return Stream.of(message).map(m -> (PartialBotApiMethod<Message>) message).toList();
+        return Stream.of(message).map(e -> new Pair<PartialBotApiMethod<Message>, Boolean>(e, true)).toList();
     }
 }

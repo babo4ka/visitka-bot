@@ -14,15 +14,13 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import utils.messages.MessageBuilder;
 import utils.messages.keyboard.InlineKeyboardBuilder;
 import utils.pages.interfaces.Page;
-import visitka.service.pages.startPage.StartPage;
+import utils.tuples.Pair;
 import visitka.utils.Emoji;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -36,7 +34,7 @@ public class CubesPage implements Page {
     private final String firstText = "Не эти кубики " + Emoji.FACE_WITH_SYMBOLS_ON_MOUTH.emoji();
 
     @Override
-    public List<PartialBotApiMethod<Message>> executeCallback(Update update) throws TelegramApiException {
+    public List<Pair<PartialBotApiMethod<Message>, Boolean>> executeCallback(Update update) throws TelegramApiException {
         logger.info("{} вызвал через кнопку команду /cubes", update.getCallbackQuery().getMessage().getChatId());
 
         List<SendPhoto> messages = new ArrayList<>();
@@ -58,11 +56,11 @@ public class CubesPage implements Page {
         messages.add(messageBuilder.createPhotoMessage
                 (keyboardBuilder.build(), update.getCallbackQuery().getMessage().getChatId(), firstText, picture));
 
-        return messages.stream().map(e -> (PartialBotApiMethod<Message>) e).toList();
+        return messages.stream().map(e -> new Pair<PartialBotApiMethod<Message>, Boolean>(e, true)).toList();
     }
 
     @Override
-    public List<PartialBotApiMethod<Message>> executeCallbackWithArgs(Update update, String... args) {
+    public List<Pair<PartialBotApiMethod<Message>, Boolean>> executeCallbackWithArgs(Update update, String... args) {
         logger.info("{} вызвал через кнопку команду /cubes с аргументами {}",
                 update.getCallbackQuery().getMessage().getChat().getUserName(), args);
 
@@ -79,6 +77,7 @@ public class CubesPage implements Page {
         messages.add(messageBuilder.createTextMessage(keyboardBuilder.build(), update.getCallbackQuery().getMessage().getChatId(),
                 "хеех"));
 
-        return Stream.concat(Stream.of(dice), messages.stream().map(e -> (PartialBotApiMethod<Message>) e)).toList();
+        return Stream.concat(Stream.of(new Pair<PartialBotApiMethod<Message>, Boolean>(dice, false)),
+                messages.stream().map(e -> new Pair<PartialBotApiMethod<Message>, Boolean>(e, true))).toList();
     }
 }

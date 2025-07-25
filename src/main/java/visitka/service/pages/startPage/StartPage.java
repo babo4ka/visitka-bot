@@ -1,6 +1,5 @@
 package visitka.service.pages.startPage;
 
-import lombok.NonNull;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Component;
@@ -13,6 +12,7 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import utils.messages.MessageBuilder;
 import utils.messages.keyboard.InlineKeyboardBuilder;
 import utils.pages.interfaces.Page;
+import utils.tuples.Pair;
 import visitka.service.pages.subscribePage.SubsDataBase;
 import visitka.utils.Emoji;
 
@@ -33,7 +33,7 @@ public class StartPage implements Page {
 
 
     @Override
-    public List<PartialBotApiMethod<Message>> execute(Update update) throws TelegramApiException {
+    public List<Pair<PartialBotApiMethod<Message>, Boolean>> execute(Update update) throws TelegramApiException {
         logger.info("{} вызвал команду /start", update.getMessage().getChat().getUserName());
         List<SendPhoto> messages = new ArrayList<>();
         MessageBuilder messageBuilder = new MessageBuilder();
@@ -60,11 +60,11 @@ public class StartPage implements Page {
         messages.add(messageBuilder.createPhotoMessage
                 (keyboardBuilder.build(), update.getMessage().getChatId(), text, picture));
 
-        return messages.stream().map(e -> (PartialBotApiMethod<Message>) e).toList();
+        return messages.stream().map(e -> new Pair<PartialBotApiMethod<Message>, Boolean>(e, true)).toList();
     }
 
     @Override
-    public List<PartialBotApiMethod<Message>> executeCallback(Update update) throws TelegramApiException {
+    public List<Pair<PartialBotApiMethod<Message>, Boolean>> executeCallback(Update update) throws TelegramApiException {
         logger.info("{} вызвал через кнопку команду /start", update.getCallbackQuery().getMessage().getChat().getUserName());
         List<SendPhoto> messages = new ArrayList<>();
         MessageBuilder messageBuilder = new MessageBuilder();
@@ -91,6 +91,6 @@ public class StartPage implements Page {
         messages.add(messageBuilder.createPhotoMessage
                 (keyboardBuilder.build(), update.getCallbackQuery().getMessage().getChatId(), text, picture));
 
-        return messages.stream().map(e -> (PartialBotApiMethod<Message>) e).toList();
+        return messages.stream().map(e -> new Pair<PartialBotApiMethod<Message>, Boolean>(e, true)).toList();
     }
 }

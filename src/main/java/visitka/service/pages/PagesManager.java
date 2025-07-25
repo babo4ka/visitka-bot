@@ -10,6 +10,7 @@ import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import utils.pages.PageManager;
+import utils.tuples.Pair;
 import visitka.service.pages.cubesPage.CubesPage;
 import visitka.service.pages.investPage.InvestPage;
 import visitka.service.pages.startPage.StartPage;
@@ -38,7 +39,7 @@ public class PagesManager extends PageManager {
     private final Map<Long, String> lastCalledPageByUser = new HashMap<>();
 
     @Override
-    public List<PartialBotApiMethod<Message>> execute(Update update, String pageName) throws TelegramApiException {
+    public List<Pair<PartialBotApiMethod<Message>, Boolean>> execute(Update update, String pageName) throws TelegramApiException {
         long chatId = update.getMessage().getChatId();
         pageName = getPageName(pageName, chatId);
 
@@ -46,7 +47,7 @@ public class PagesManager extends PageManager {
     }
 
     @Override
-    public List<PartialBotApiMethod<Message>> executeWithArgs(Update update, String pageName, String... args) throws TelegramApiException {
+    public List<Pair<PartialBotApiMethod<Message>, Boolean>> executeWithArgs(Update update, String pageName, String... args) throws TelegramApiException {
         long chatId = update.getMessage().getChatId();
         pageName = getPageName(pageName, chatId);
 
@@ -54,7 +55,7 @@ public class PagesManager extends PageManager {
     }
 
     @Override
-    public List<PartialBotApiMethod<Message>> executeCallback(Update update, String pageName) throws TelegramApiException {
+    public List<Pair<PartialBotApiMethod<Message>, Boolean>> executeCallback(Update update, String pageName) throws TelegramApiException {
         long chatId = update.getCallbackQuery().getMessage().getChatId();
         pageName = getPageName(pageName, chatId);
 
@@ -62,7 +63,7 @@ public class PagesManager extends PageManager {
     }
 
     @Override
-    public List<PartialBotApiMethod<Message>> executeCallbackWithArgs(Update update, String pageName, String... args) throws TelegramApiException {
+    public List<Pair<PartialBotApiMethod<Message>, Boolean>> executeCallbackWithArgs(Update update, String pageName, String... args) throws TelegramApiException {
         long chatId = update.getCallbackQuery().getMessage().getChatId();
         pageName = getPageName(pageName, chatId);
 

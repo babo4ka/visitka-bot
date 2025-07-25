@@ -13,6 +13,8 @@ import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import utils.messages.MessageBuilder;
+import utils.messages.MessagesDump;
+import utils.tuples.Pair;
 import visitka.config.BotConfig;
 import visitka.service.pages.PagesManager;
 import visitka.service.pages.subscribePage.SubsDataBase;
@@ -44,7 +46,6 @@ public class VisitkaBot extends TelegramLongPollingBot {
     PagesManager pageManager;
 
 
-
     @Override
     public void onUpdateReceived(Update update) {
 
@@ -69,7 +70,7 @@ public class VisitkaBot extends TelegramLongPollingBot {
             args = Arrays.copyOfRange(data, 1, data.length);
         }else args = data;
 
-        List<PartialBotApiMethod<Message>> messages;
+        List<Pair<PartialBotApiMethod<Message>, Boolean>> messages;
 
         if(args.length == 0){
             messages = pageManager.execute(update, page);
@@ -81,8 +82,8 @@ public class VisitkaBot extends TelegramLongPollingBot {
 
 
         for(var message: messages){
-            if(message instanceof SendMessage) execute((SendMessage) message);
-            else if(message instanceof SendPhoto) execute((SendPhoto) message);
+            if(message.getFirst() instanceof SendMessage) execute((SendMessage) message.getFirst());
+            else if(message.getFirst() instanceof SendPhoto) execute((SendPhoto) message.getFirst());
         }
     }
 
@@ -98,7 +99,7 @@ public class VisitkaBot extends TelegramLongPollingBot {
         }else args = data;
 
 
-        List<PartialBotApiMethod<Message>> messages;
+        List<Pair<PartialBotApiMethod<Message>, Boolean>> messages;
 
         if(args.length == 0){
             messages = pageManager.executeCallback(update, page);
@@ -110,9 +111,9 @@ public class VisitkaBot extends TelegramLongPollingBot {
 
 
         for(var message: messages){
-            if(message instanceof SendMessage) execute((SendMessage) message);
-            else if(message instanceof SendPhoto) execute((SendPhoto) message);
-            else if (message instanceof SendDice) execute((SendDice) message);
+            if(message.getFirst() instanceof SendMessage) execute((SendMessage) message.getFirst());
+            else if(message.getFirst() instanceof SendPhoto) execute((SendPhoto) message.getFirst());
+            else if (message.getFirst() instanceof SendDice) execute((SendDice) message.getFirst());
         }
     }
 
