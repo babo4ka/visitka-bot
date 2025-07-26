@@ -14,7 +14,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.ta4j.core.BarSeries;
 import org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod;
-import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.methods.send.SendPhoto;
 import org.telegram.telegrambots.meta.api.objects.InputFile;
 import org.telegram.telegrambots.meta.api.objects.Message;
@@ -24,6 +23,7 @@ import ru.tinkoff.piapi.contract.v1.HistoricCandle;
 import utils.messages.MessageBuilder;
 import utils.messages.keyboard.InlineKeyboardBuilder;
 import utils.pages.interfaces.Page;
+import utils.tuples.Pair;
 import visitka.invest.DataLoader;
 import visitka.utils.Emoji;
 
@@ -55,7 +55,7 @@ public class InvestPage implements Page {
     private final Logger logger = LogManager.getLogger();
 
     @Override
-    public List<PartialBotApiMethod<Message>> executeCallback(Update update) throws TelegramApiException {
+    public List<Pair<PartialBotApiMethod<Message>, Boolean>> executeCallback(Update update) throws TelegramApiException {
         logger.info("{} вызвал через кнопку команду /invest", update.getCallbackQuery().getMessage().getChat().getUserName());
 
         MessageBuilder messageBuilder = new MessageBuilder();
@@ -80,7 +80,7 @@ public class InvestPage implements Page {
         SendPhoto photo = messageBuilder.createPhotoMessage(keyboardBuilder.build(), update.getCallbackQuery().getMessage().getChatId(),
                 info, picture);
 
-        return Stream.of(photo).map(e -> (PartialBotApiMethod<Message>) e).toList();
+        return Stream.of(photo).map(e -> new Pair<PartialBotApiMethod<Message>, Boolean>(e, true)).toList();
     }
 
 

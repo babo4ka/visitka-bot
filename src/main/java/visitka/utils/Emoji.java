@@ -15,6 +15,7 @@ public enum Emoji {
     SWEAT(":sweat:"),
     OPEN_MOUTH(":open_mouth:"),
     PLEADING_FACE(":pleading_face:"),
+    COLD_SWEAT(":cold_sweat:"),
     SOB(":sob:"),
     UNAMUSED(":unamused:"),
     BANANA(":banana:");

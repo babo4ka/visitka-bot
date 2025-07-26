@@ -36,7 +36,9 @@ public class SubscribePage implements Page {
 
         MessageBuilder messageBuilder = new MessageBuilder();
         InlineKeyboardBuilder keyboardBuilder = new InlineKeyboardBuilder();
-        keyboardBuilder = keyboardBuilder.addButton(Emoji.UNAMUSED.emoji() + " На главную", "/start").nextRow();
+        keyboardBuilder = keyboardBuilder.addButton(Emoji.UNAMUSED.emoji() + " На главную", "/start").nextRow()
+                .addButton(Emoji.LINKED_PAPERCLIPS.emoji() + (args[0].equals("1")?" Отписаться":" Подписаться"),
+                        args[0].equals("1")?"/sub 0":"/sub 1").nextRow();
 
         if(args[0].equals("1"))
             SubsDataBase.add(update.getCallbackQuery().getMessage().getChatId());

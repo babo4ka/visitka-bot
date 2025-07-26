@@ -1,49 +1,103 @@
-2025-07-23 21:26:30,905 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 23548 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
-2025-07-23 21:26:30,915 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
-2025-07-23 21:26:33,236 WARN o.s.c.a.AnnotationConfigApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'visitka.service.pages.subscribePage.SubscribePage' available
-2025-07-23 21:26:33,239 INFO o.s.b.a.l.ConditionEvaluationReportLogger [main] 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-07-23 21:26:33,255 ERROR o.s.b.d.LoggingFailureAnalysisReporter [main] 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-A component required a bean of type 'visitka.service.pages.subscribePage.SubscribePage' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'visitka.service.pages.subscribePage.SubscribePage' in your configuration.
-
-2025-07-23 21:26:51,295 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 23928 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
-2025-07-23 21:26:51,299 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
-2025-07-23 21:26:52,720 INFO v.Application [main] Started Application in 1.775 seconds (process running for 2.323)
-2025-07-23 21:26:55,805 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал команду /start
-2025-07-23 21:26:57,681 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [1]
-2025-07-23 21:27:01,176 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
-2025-07-23 21:27:03,427 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [0]
-2025-07-23 21:27:05,486 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
-2025-07-23 21:27:07,631 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [1]
-2025-07-23 21:27:10,559 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
-2025-07-23 21:28:25,067 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 22424 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
-2025-07-23 21:28:25,070 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
-2025-07-23 21:28:26,465 INFO v.Application [main] Started Application in 1.717 seconds (process running for 2.234)
-2025-07-23 21:28:32,023 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал команду /start
-2025-07-23 21:28:33,448 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [1]
-2025-07-23 21:28:34,419 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
-2025-07-23 21:28:36,894 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [0]
-2025-07-23 21:28:39,270 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
-2025-07-23 21:33:13,047 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 22716 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
-2025-07-23 21:33:13,050 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
-2025-07-23 21:33:14,714 INFO v.Application [main] Started Application in 2.073 seconds (process running for 2.86)
-2025-07-23 21:33:23,622 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 24200 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
-2025-07-23 21:33:23,625 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
-2025-07-23 21:33:25,034 INFO v.Application [main] Started Application in 1.732 seconds (process running for 2.285)
-2025-07-23 21:33:35,593 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [1]
-2025-07-23 21:33:36,879 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
-2025-07-23 21:33:44,458 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [0]
-2025-07-23 21:33:45,786 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-26 17:11:35,599 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 6240 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-26 17:11:35,608 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-26 17:11:37,413 INFO v.Application [main] Started Application in 2.304 seconds (process running for 3.119)
+2025-07-26 17:11:48,140 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал команду /start
+2025-07-26 17:11:51,728 ERROR o.t.t.u.DefaultBotSession [vvisitka_bot Telegram Executor] Cannot invoke "utils.pages.interfaces.Page.executeCallback(org.telegram.telegrambots.meta.api.objects.Update)" because the return value of "java.util.Map.get(Object)" is null
+java.lang.NullPointerException: Cannot invoke "utils.pages.interfaces.Page.executeCallback(org.telegram.telegrambots.meta.api.objects.Update)" because the return value of "java.util.Map.get(Object)" is null
+	at visitka.service.pages.PagesManager.executeCallback(PagesManager.java:62) ~[classes/:?]
+	at visitka.service.VisitkaBot.processCallback(VisitkaBot.java:105) ~[classes/:?]
+	at visitka.service.VisitkaBot.onUpdateReceived(VisitkaBot.java:56) ~[classes/:?]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[?:?]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.9.0.jar:?]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) [telegrambots-6.9.0.jar:?]
+2025-07-26 17:11:54,634 INFO v.s.p.i.InvestPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /invest
+2025-07-26 17:11:55,076 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил свечи по SBERP, количество: 173
+2025-07-26 17:11:55,209 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил информацию по SBERP:
+ SBERP
+Сбер Банк - привилегированные акции
+306.36
+2025-07-26 17:11:55,216 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил серию баров по SBERP, количество: 173
+2025-07-26 17:12:01,801 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-26 17:12:03,886 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [1]
+2025-07-26 17:12:08,900 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-26 17:12:11,069 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [0]
+2025-07-26 17:12:12,792 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-26 17:12:15,179 INFO v.s.p.c.CubesPage [vvisitka_bot Telegram Executor] 268932900 вызвал через кнопку команду /cubes
+2025-07-26 17:12:16,780 INFO v.s.p.c.CubesPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /cubes с аргументами [2]
+2025-07-26 17:12:21,808 INFO v.s.p.c.CubesPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /cubes с аргументами [2]
+2025-07-26 17:12:26,099 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start с агрументами [fake]
+2025-07-26 17:12:30,085 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-26 17:15:18,052 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 10252 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-26 17:15:18,055 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-26 17:15:19,512 INFO v.Application [main] Started Application in 1.782 seconds (process running for 2.333)
+2025-07-26 17:15:28,264 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал команду /start
+2025-07-26 17:15:30,240 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [1]
+2025-07-26 17:15:32,382 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [0]
+2025-07-26 17:15:34,659 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [1]
+2025-07-26 17:15:36,721 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [0]
+2025-07-26 17:15:37,825 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-26 17:15:38,953 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-26 17:15:43,026 INFO v.s.p.c.CubesPage [vvisitka_bot Telegram Executor] 268932900 вызвал через кнопку команду /cubes
+2025-07-26 17:15:44,190 INFO v.s.p.c.CubesPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /cubes с аргументами [2]
+2025-07-26 17:15:45,825 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start с агрументами [fake]
+2025-07-26 17:15:47,313 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-26 17:16:29,709 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 16316 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-26 17:16:29,712 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-26 17:16:31,342 INFO v.Application [main] Started Application in 1.959 seconds (process running for 2.51)
+2025-07-26 17:16:35,462 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал команду /start
+2025-07-26 17:16:38,084 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [1]
+2025-07-26 17:16:40,163 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [🖇/sub, 0]
+2025-07-26 17:16:43,732 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-26 17:16:45,990 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [1]
+2025-07-26 17:16:47,896 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [🖇/sub, 0]
+2025-07-26 17:16:49,759 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [🖇/sub, 1]
+2025-07-26 17:16:50,690 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-26 17:16:53,109 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [1]
+2025-07-26 17:16:56,212 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [🖇/sub, 0]
+2025-07-26 17:16:57,845 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-26 17:16:59,329 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [1]
+2025-07-26 17:17:01,258 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-26 17:17:03,319 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [0]
+2025-07-26 17:17:05,525 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [🖇/sub, 1]
+2025-07-26 17:17:07,594 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-26 17:28:42,084 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 12004 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-26 17:28:42,087 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-26 17:28:43,790 INFO v.Application [main] Started Application in 2.099 seconds (process running for 2.719)
+2025-07-26 17:28:59,443 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал команду /start
+2025-07-26 17:29:03,831 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [1]
+2025-07-26 17:29:03,831 INFO v.s.p.s.SubsDataBase [vvisitka_bot Telegram Executor] подписался 268932900
+2025-07-26 17:29:08,051 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-26 17:29:09,859 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [0]
+2025-07-26 17:29:09,859 INFO v.s.p.s.SubsDataBase [vvisitka_bot Telegram Executor] отписался 268932900
+2025-07-26 17:29:14,811 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [🖇/sub, 1]
+2025-07-26 17:29:14,811 INFO v.s.p.s.SubsDataBase [vvisitka_bot Telegram Executor] отписался 268932900
+2025-07-26 17:29:25,826 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-26 17:29:42,144 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 1396 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-26 17:29:42,146 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-26 17:29:43,536 INFO v.Application [main] Started Application in 1.713 seconds (process running for 2.296)
+2025-07-26 17:29:47,222 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал команду /start
+2025-07-26 17:29:48,717 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [1]
+2025-07-26 17:29:48,717 INFO v.s.p.s.SubsDataBase [vvisitka_bot Telegram Executor] подписался 268932900
+2025-07-26 17:29:50,209 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-26 17:29:51,784 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [0]
+2025-07-26 17:29:51,784 INFO v.s.p.s.SubsDataBase [vvisitka_bot Telegram Executor] отписался 268932900
+2025-07-26 17:29:53,051 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [1]
+2025-07-26 17:29:53,051 INFO v.s.p.s.SubsDataBase [vvisitka_bot Telegram Executor] подписался 268932900
+2025-07-26 17:29:54,464 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-26 17:29:55,647 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [0]
+2025-07-26 17:29:55,647 INFO v.s.p.s.SubsDataBase [vvisitka_bot Telegram Executor] отписался 268932900
+2025-07-26 17:29:57,224 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [1]
+2025-07-26 17:29:57,224 INFO v.s.p.s.SubsDataBase [vvisitka_bot Telegram Executor] подписался 268932900
+2025-07-26 17:29:58,337 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [0]
+2025-07-26 17:29:58,337 INFO v.s.p.s.SubsDataBase [vvisitka_bot Telegram Executor] отписался 268932900
+2025-07-26 17:30:00,502 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [1]
+2025-07-26 17:30:00,502 INFO v.s.p.s.SubsDataBase [vvisitka_bot Telegram Executor] подписался 268932900
+2025-07-26 17:30:01,583 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-26 17:30:03,073 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [0]
+2025-07-26 17:30:03,073 INFO v.s.p.s.SubsDataBase [vvisitka_bot Telegram Executor] отписался 268932900
+2025-07-26 17:30:04,956 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-26 17:30:06,491 INFO v.s.p.c.CubesPage [vvisitka_bot Telegram Executor] 268932900 вызвал через кнопку команду /cubes
+2025-07-26 17:30:08,291 INFO v.s.p.c.CubesPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /cubes с аргументами [2]
+2025-07-26 17:30:10,086 INFO v.s.p.c.CubesPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /cubes с аргументами [2]
+2025-07-26 17:30:13,664 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start с агрументами [fake]
+2025-07-26 17:30:15,405 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start

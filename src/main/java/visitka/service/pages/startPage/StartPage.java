@@ -21,6 +21,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
 
 @Component
 public class StartPage implements Page {
@@ -28,6 +29,8 @@ public class StartPage implements Page {
     public static final String NAME = "/start";
 
     private final String text = "Привет, это пример телеграм-бота, который я могу сделать. " + Emoji.BANANA.emoji();
+
+    private final String fakeText = "Ты попал не туда " + Emoji.COLD_SWEAT.emoji();
 
     private final Logger logger = LogManager.getLogger();
 
@@ -70,6 +73,7 @@ public class StartPage implements Page {
         MessageBuilder messageBuilder = new MessageBuilder();
         InlineKeyboardBuilder keyboardBuilder = new InlineKeyboardBuilder();
 
+
         keyboardBuilder = keyboardBuilder
                 .addButton(Emoji.SMIRK.emoji() + " Скинь меня кому-нибудь", "/share").nextRow()
                 .addButton(Emoji.MAN_DANCING.emoji() + " Во че еще могу", "/invest").nextRow()
@@ -92,5 +96,31 @@ public class StartPage implements Page {
                 (keyboardBuilder.build(), update.getCallbackQuery().getMessage().getChatId(), text, picture));
 
         return messages.stream().map(e -> new Pair<PartialBotApiMethod<Message>, Boolean>(e, true)).toList();
+    }
+
+    @Override
+    public List<Pair<PartialBotApiMethod<Message>, Boolean>> executeCallbackWithArgs(Update update, String... args) {
+        logger.info("{} вызвал через кнопку команду /start с агрументами {}", update.getCallbackQuery().getMessage().getChat().getUserName(), args);
+
+        MessageBuilder messageBuilder = new MessageBuilder();
+        InlineKeyboardBuilder keyboardBuilder = new InlineKeyboardBuilder();
+
+        keyboardBuilder = keyboardBuilder.addButton("Сюда", "/start").nextRow();
+
+        InputStream inputStream = StartPage.class.getResourceAsStream("/pics/sadbanana.jpg");
+        InputFile picture;
+
+
+        try {
+            assert inputStream != null;
+            picture = new InputFile(new ByteArrayInputStream(inputStream.readAllBytes()), "file");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        SendPhoto sendPhoto = messageBuilder.createPhotoMessage(keyboardBuilder.build(), update.getCallbackQuery().getMessage().getChatId(),
+                fakeText, picture);
+
+        return Stream.of(sendPhoto).map(e -> new Pair<PartialBotApiMethod<Message>, Boolean>(sendPhoto, true)).toList();
     }
 }

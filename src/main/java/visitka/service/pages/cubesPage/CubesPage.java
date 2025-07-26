@@ -71,7 +71,7 @@ public class CubesPage implements Page {
         MessageBuilder messageBuilder = new MessageBuilder();
         InlineKeyboardBuilder keyboardBuilder = new InlineKeyboardBuilder();
 
-        keyboardBuilder = keyboardBuilder.addButton(Emoji.UNAMUSED.emoji() +"На главную", "/start").nextRow()
+        keyboardBuilder = keyboardBuilder.addButton(Emoji.UNAMUSED.emoji() +"На главную", "/start fake").nextRow()
                         .addButton(Emoji.SOB.emoji() + "Еще", "/cubes 2").nextRow();
 
         messages.add(messageBuilder.createTextMessage(keyboardBuilder.build(), update.getCallbackQuery().getMessage().getChatId(),
