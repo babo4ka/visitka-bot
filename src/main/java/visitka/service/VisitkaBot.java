@@ -9,11 +9,12 @@ import org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod;
 import org.telegram.telegrambots.meta.api.methods.send.SendDice;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.methods.send.SendPhoto;
+import org.telegram.telegrambots.meta.api.methods.updatingmessages.DeleteMessage;
 import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
+import utils.messages.ManyUsersMessagesDump;
 import utils.messages.MessageBuilder;
-import utils.messages.MessagesDump;
 import utils.tuples.Pair;
 import visitka.config.BotConfig;
 import visitka.service.pages.PagesManager;
@@ -45,6 +46,8 @@ public class VisitkaBot extends TelegramLongPollingBot {
     @Autowired
     PagesManager pageManager;
 
+    ManyUsersMessagesDump messagesDump = new ManyUsersMessagesDump();
+
 
     @Override
     public void onUpdateReceived(Update update) {
@@ -61,6 +64,7 @@ public class VisitkaBot extends TelegramLongPollingBot {
     }
 
     private void processMessage(Update update) throws TelegramApiException {
+        deletePreviousMessages(update.getMessage().getChatId());
         String[] data = update.getMessage().getText().split(" ");
         String page = "";
         String[] args;
@@ -82,13 +86,18 @@ public class VisitkaBot extends TelegramLongPollingBot {
 
 
         for(var message: messages){
-            if(message.getFirst() instanceof SendMessage) execute((SendMessage) message.getFirst());
-            else if(message.getFirst() instanceof SendPhoto) execute((SendPhoto) message.getFirst());
+            Message msg = null;
+            if(message.getFirst() instanceof SendMessage) msg = execute((SendMessage) message.getFirst());
+            else if(message.getFirst() instanceof SendPhoto) msg = execute((SendPhoto) message.getFirst());
+
+            if(message.getSecond())
+                messagesDump.addMessage(msg, update.getMessage().getChatId());
         }
     }
 
 
     private void processCallback(Update update) throws TelegramApiException {
+        deletePreviousMessages(update.getCallbackQuery().getMessage().getChatId());
         String[] data = update.getCallbackQuery().getData().split(" ");
         String page = "";
         String[] args;
@@ -111,13 +120,31 @@ public class VisitkaBot extends TelegramLongPollingBot {
 
 
         for(var message: messages){
-            if(message.getFirst() instanceof SendMessage) execute((SendMessage) message.getFirst());
-            else if(message.getFirst() instanceof SendPhoto) execute((SendPhoto) message.getFirst());
-            else if (message.getFirst() instanceof SendDice) execute((SendDice) message.getFirst());
+            Message msg = null;
+            if(message.getFirst() instanceof SendMessage) msg = execute((SendMessage) message.getFirst());
+            else if(message.getFirst() instanceof SendPhoto) msg = execute((SendPhoto) message.getFirst());
+            else if (message.getFirst() instanceof SendDice) msg = execute((SendDice) message.getFirst());
+
+            if(message.getSecond())
+                messagesDump.addMessage(msg, update.getCallbackQuery().getMessage().getChatId());
         }
     }
 
 
+    private void deletePreviousMessages(long chatId) {
+        List<DeleteMessage> messages = messagesDump.getMessagesById(chatId);
+        if (messages != null) {
+            messages.forEach(msg -> {
+                try {
+                    execute(msg);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            });
+
+            messagesDump.clearDump(chatId);
+        }
+    }
 
     @Scheduled(fixedRate = 15000)
     private void sendMessagesToSubs(){

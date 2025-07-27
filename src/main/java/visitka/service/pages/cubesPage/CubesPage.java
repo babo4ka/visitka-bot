@@ -35,7 +35,7 @@ public class CubesPage implements Page {
 
     @Override
     public List<Pair<PartialBotApiMethod<Message>, Boolean>> executeCallback(Update update) throws TelegramApiException {
-        logger.info("{} вызвал через кнопку команду /cubes", update.getCallbackQuery().getMessage().getChatId());
+        logger.info("{} вызвал через кнопку команду /cubes", update.getCallbackQuery().getMessage().getChat().getUserName());
 
         List<SendPhoto> messages = new ArrayList<>();
         MessageBuilder messageBuilder = new MessageBuilder();

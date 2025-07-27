@@ -73,7 +73,7 @@
         <dependency>
             <groupId>com.github.babo4ka</groupId>
             <artifactId>tg-bot-utils</artifactId>
-            <version>1.4</version>
+            <version>1.5</version>
         </dependency>
 
         <dependency>
