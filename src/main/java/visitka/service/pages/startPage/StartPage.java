@@ -76,7 +76,8 @@ public class StartPage implements Page {
 
 
         keyboardBuilder = keyboardBuilder
-                .addButton(Emoji.SMIRK.emoji() + " Скинь меня кому-нибудь", "/share").nextRow()
+                .addURLButton(Emoji.SMIRK.emoji() + " Скинь меня кому-нибудь",
+                        "https://t.me/share/url?url=https://t.me/vvisitka_bot&text=хехе").nextRow()
                 .addButton(Emoji.MAN_DANCING.emoji() + " Во че еще могу", "/invest").nextRow()
                 .addButton(Emoji.LINKED_PAPERCLIPS.emoji() +
                         (SubsDataBase.contains(update.getCallbackQuery().getMessage().getChatId())?" Отписаться":" Подписаться"),

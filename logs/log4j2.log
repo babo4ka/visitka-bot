@@ -1,57 +1,360 @@
-2025-07-27 15:00:29,083 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 14524 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
-2025-07-27 15:00:29,093 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
-2025-07-27 15:00:30,936 INFO v.Application [main] Started Application in 2.273 seconds (process running for 2.97)
-2025-07-27 15:00:36,463 ERROR o.t.t.u.DefaultBotSession [vvisitka_bot Telegram Executor] Cannot invoke "utils.messages.ManyUsersMessagesDump.getMessagesById(long)" because "this.messagesDump" is null
-java.lang.NullPointerException: Cannot invoke "utils.messages.ManyUsersMessagesDump.getMessagesById(long)" because "this.messagesDump" is null
-	at visitka.service.VisitkaBot.deletePreviousMessages(VisitkaBot.java:134) ~[classes/:?]
-	at visitka.service.VisitkaBot.processMessage(VisitkaBot.java:66) ~[classes/:?]
-	at visitka.service.VisitkaBot.onUpdateReceived(VisitkaBot.java:56) ~[classes/:?]
+2025-07-28 18:59:57,449 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 15956 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-28 18:59:57,459 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-28 18:59:59,218 INFO v.Application [main] Started Application in 2.172 seconds (process running for 2.847)
+2025-07-28 19:00:08,782 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал команду /start
+2025-07-28 19:00:12,177 INFO v.s.VisitkaBot [268932900 task] messages dump of 268932900 cleared
+2025-07-28 19:00:12,178 INFO v.s.VisitkaBot [268932900 task] messages dump's size if 268932900: 0
+2025-07-28 19:00:16,341 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал команду /start
+2025-07-28 19:00:20,425 INFO v.s.VisitkaBot [268932900 task] messages dump of 268932900 cleared
+2025-07-28 19:00:20,425 INFO v.s.VisitkaBot [268932900 task] messages dump's size if 268932900: 0
+2025-07-28 19:00:20,706 ERROR o.t.t.u.DefaultBotSession [vvisitka_bot Telegram Executor] null
+java.util.ConcurrentModificationException: null
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1606) ~[?:?]
+	at visitka.service.VisitkaBot.deletePreviousMessages(VisitkaBot.java:148) ~[classes/:?]
+	at visitka.service.VisitkaBot.processCallback(VisitkaBot.java:109) ~[classes/:?]
+	at visitka.service.VisitkaBot.onUpdateReceived(VisitkaBot.java:66) ~[classes/:?]
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[?:?]
 	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.9.0.jar:?]
 	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) [telegrambots-6.9.0.jar:?]
-2025-07-27 15:01:01,193 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 9952 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
-2025-07-27 15:01:01,195 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
-2025-07-27 15:01:02,573 INFO v.Application [main] Started Application in 1.706 seconds (process running for 2.233)
-2025-07-27 15:01:03,953 ERROR o.t.t.u.DefaultBotSession [vvisitka_bot Telegram Executor] Cannot invoke "java.util.List.forEach(java.util.function.Consumer)" because the return value of "utils.messages.ManyUsersMessagesDump.getMessagesById(long)" is null
-java.lang.NullPointerException: Cannot invoke "java.util.List.forEach(java.util.function.Consumer)" because the return value of "utils.messages.ManyUsersMessagesDump.getMessagesById(long)" is null
-	at visitka.service.VisitkaBot.deletePreviousMessages(VisitkaBot.java:134) ~[classes/:?]
-	at visitka.service.VisitkaBot.processMessage(VisitkaBot.java:66) ~[classes/:?]
-	at visitka.service.VisitkaBot.onUpdateReceived(VisitkaBot.java:56) ~[classes/:?]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[?:?]
-	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.9.0.jar:?]
-	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) [telegrambots-6.9.0.jar:?]
-2025-07-27 15:03:07,965 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 18344 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
-2025-07-27 15:03:07,967 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
-2025-07-27 15:03:09,373 INFO v.Application [main] Started Application in 1.729 seconds (process running for 2.249)
-2025-07-27 15:03:10,939 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал команду /start
-2025-07-27 15:03:14,523 INFO v.s.p.i.InvestPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /invest
-2025-07-27 15:03:15,037 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил свечи по PIKK, количество: 174
-2025-07-27 15:03:15,208 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил информацию по PIKK:
+2025-07-28 19:00:40,706 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 16552 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-28 19:00:40,709 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-28 19:00:42,096 INFO v.Application [main] Started Application in 1.72 seconds (process running for 2.251)
+2025-07-28 19:00:44,033 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал команду /start
+2025-07-28 19:00:45,704 INFO v.s.p.i.InvestPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /invest
+2025-07-28 19:00:46,168 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил свечи по MOEX, количество: 174
+2025-07-28 19:00:46,314 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил информацию по MOEX:
+ MOEX
+Московская Биржа
+174.61
+2025-07-28 19:00:46,322 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил серию баров по MOEX, количество: 174
+2025-07-28 19:00:49,368 INFO v.s.VisitkaBot [268932900 task] messages dump of 268932900 cleared
+2025-07-28 19:00:49,368 INFO v.s.VisitkaBot [268932900 task] messages dump's size if 268932900: 0
+2025-07-28 19:00:49,390 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-28 19:00:52,850 INFO v.s.VisitkaBot [268932900 task] messages dump of 268932900 cleared
+2025-07-28 19:00:52,850 INFO v.s.VisitkaBot [268932900 task] messages dump's size if 268932900: 0
+2025-07-28 19:00:54,714 INFO v.s.VisitkaBot [268932900 task] messages dump of 268932900 cleared
+2025-07-28 19:00:54,714 INFO v.s.VisitkaBot [268932900 task] messages dump's size if 268932900: 0
+2025-07-28 19:00:54,738 INFO v.s.p.i.InvestPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /invest
+2025-07-28 19:00:54,844 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил свечи по GAZP, количество: 174
+2025-07-28 19:00:54,941 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил информацию по GAZP:
+ GAZP
+Газпром
+122.78
+2025-07-28 19:00:54,944 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил серию баров по GAZP, количество: 174
+2025-07-28 19:00:58,250 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-28 19:01:00,953 INFO v.s.VisitkaBot [268932900 task] messages dump of 268932900 cleared
+2025-07-28 19:01:00,953 INFO v.s.VisitkaBot [268932900 task] messages dump's size if 268932900: 0
+2025-07-28 19:01:02,572 INFO v.s.p.i.InvestPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /invest
+2025-07-28 19:01:02,670 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил свечи по PIKK, количество: 174
+2025-07-28 19:01:02,780 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил информацию по PIKK:
  PIKK
 ПИК
-612.0
-2025-07-27 15:03:15,217 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил серию баров по PIKK, количество: 174
-2025-07-27 15:03:19,086 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
-2025-07-27 15:03:20,913 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [1]
-2025-07-27 15:03:20,913 INFO v.s.p.s.SubsDataBase [vvisitka_bot Telegram Executor] подписался 268932900
-2025-07-27 15:03:23,401 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [0]
-2025-07-27 15:03:23,401 INFO v.s.p.s.SubsDataBase [vvisitka_bot Telegram Executor] отписался 268932900
-2025-07-27 15:03:25,420 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [1]
-2025-07-27 15:03:25,420 INFO v.s.p.s.SubsDataBase [vvisitka_bot Telegram Executor] подписался 268932900
-2025-07-27 15:03:27,355 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
-2025-07-27 15:03:32,114 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [0]
-2025-07-27 15:03:32,114 INFO v.s.p.s.SubsDataBase [vvisitka_bot Telegram Executor] отписался 268932900
-2025-07-27 15:03:33,572 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
-2025-07-27 15:03:35,081 INFO v.s.p.c.CubesPage [vvisitka_bot Telegram Executor] 268932900 вызвал через кнопку команду /cubes
-2025-07-27 15:03:36,585 INFO v.s.p.c.CubesPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /cubes с аргументами [2]
-2025-07-27 15:03:40,258 INFO v.s.p.c.CubesPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /cubes с аргументами [2]
-2025-07-27 15:03:44,391 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start с агрументами [fake]
-2025-07-27 15:03:46,287 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
-2025-07-27 15:15:07,277 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 1076 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
-2025-07-27 15:15:07,280 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
-2025-07-27 15:15:09,041 INFO v.Application [main] Started Application in 2.153 seconds (process running for 2.807)
-2025-07-27 15:15:13,391 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал команду /start
-2025-07-27 15:15:41,168 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 19076 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
-2025-07-27 15:15:41,170 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
-2025-07-27 15:15:42,594 INFO v.Application [main] Started Application in 1.752 seconds (process running for 2.278)
-2025-07-27 15:15:44,761 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал команду /start
+599.3
+2025-07-28 19:01:02,782 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил серию баров по PIKK, количество: 174
+2025-07-28 19:01:03,601 INFO v.s.p.i.InvestPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /invest
+2025-07-28 19:01:03,601 ERROR o.t.t.u.DefaultBotSession [vvisitka_bot Telegram Executor] Index 5 out of bounds for length 5
+java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 5
+	at visitka.service.pages.investPage.InvestPage.executeCallback(InvestPage.java:65) ~[classes/:?]
+	at visitka.service.pages.PagesManager.executeCallback(PagesManager.java:62) ~[classes/:?]
+	at visitka.service.VisitkaBot.processCallback(VisitkaBot.java:123) ~[classes/:?]
+	at visitka.service.VisitkaBot.onUpdateReceived(VisitkaBot.java:66) ~[classes/:?]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[?:?]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.9.0.jar:?]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) [telegrambots-6.9.0.jar:?]
+2025-07-28 19:01:03,630 INFO v.s.VisitkaBot [268932900 task] messages dump of 268932900 cleared
+2025-07-28 19:01:03,630 INFO v.s.VisitkaBot [268932900 task] messages dump's size if 268932900: 0
+2025-07-28 19:02:21,738 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 11828 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-28 19:02:21,741 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-28 19:02:23,146 INFO v.Application [main] Started Application in 1.724 seconds (process running for 2.24)
+2025-07-28 19:02:32,950 INFO v.s.p.i.InvestPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /invest
+2025-07-28 19:02:33,301 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил свечи по SBERP, количество: 174
+2025-07-28 19:02:33,417 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил информацию по SBERP:
+ SBERP
+Сбер Банк - привилегированные акции
+301.2
+2025-07-28 19:02:33,425 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил серию баров по SBERP, количество: 174
+2025-07-28 19:02:39,557 INFO v.s.VisitkaBot [268932900 task] messages dump of 268932900 cleared
+2025-07-28 19:02:39,557 INFO v.s.VisitkaBot [268932900 task] messages dump's size if 268932900: 0
+2025-07-28 19:02:54,840 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 10844 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-28 19:02:54,843 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-28 19:02:56,258 INFO v.Application [main] Started Application in 1.737 seconds (process running for 2.325)
+2025-07-28 19:03:03,066 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал команду /start
+2025-07-28 19:03:05,088 INFO v.s.p.i.InvestPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /invest
+2025-07-28 19:03:05,502 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил свечи по SBERP, количество: 174
+2025-07-28 19:03:05,605 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил информацию по SBERP:
+ SBERP
+Сбер Банк - привилегированные акции
+301.2
+2025-07-28 19:03:05,612 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил серию баров по SBERP, количество: 174
+2025-07-28 19:03:07,973 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-28 19:03:08,522 INFO v.s.VisitkaBot [268932900 task] messages dump of 268932900 cleared
+2025-07-28 19:03:08,522 INFO v.s.VisitkaBot [268932900 task] messages dump's size if 268932900: 0
+2025-07-28 19:03:10,727 INFO v.s.p.i.InvestPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /invest
+2025-07-28 19:03:10,820 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил свечи по PIKK, количество: 174
+2025-07-28 19:03:10,915 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил информацию по PIKK:
+ PIKK
+ПИК
+599.3
+2025-07-28 19:03:10,918 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил серию баров по PIKK, количество: 174
+2025-07-28 19:03:11,280 INFO v.s.VisitkaBot [268932900 task] messages dump of 268932900 cleared
+2025-07-28 19:03:11,280 INFO v.s.VisitkaBot [268932900 task] messages dump's size if 268932900: 0
+2025-07-28 19:03:13,056 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-28 19:03:13,346 INFO v.s.VisitkaBot [268932900 task] messages dump of 268932900 cleared
+2025-07-28 19:03:13,346 INFO v.s.VisitkaBot [268932900 task] messages dump's size if 268932900: 0
+2025-07-28 19:03:16,257 INFO v.s.VisitkaBot [268932900 task] messages dump of 268932900 cleared
+2025-07-28 19:03:16,257 INFO v.s.VisitkaBot [268932900 task] messages dump's size if 268932900: 0
+2025-07-28 19:03:18,391 INFO v.s.VisitkaBot [268932900 task] messages dump of 268932900 cleared
+2025-07-28 19:03:18,391 INFO v.s.VisitkaBot [268932900 task] messages dump's size if 268932900: 0
+2025-07-28 19:03:36,682 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал команду /start
+2025-07-28 19:03:42,004 INFO v.s.VisitkaBot [268932900 task] messages dump of 268932900 cleared
+2025-07-28 19:03:42,004 INFO v.s.VisitkaBot [268932900 task] messages dump's size if 268932900: 0
+2025-07-28 19:03:50,910 INFO v.s.p.i.InvestPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /invest
+2025-07-28 19:03:51,007 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил свечи по MOEX, количество: 174
+2025-07-28 19:03:51,112 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил информацию по MOEX:
+ MOEX
+Московская Биржа
+174.61
+2025-07-28 19:03:51,114 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил серию баров по MOEX, количество: 174
+2025-07-28 19:03:53,188 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-28 19:03:56,595 INFO v.s.VisitkaBot [268932900 task] messages dump of 268932900 cleared
+2025-07-28 19:03:56,595 INFO v.s.VisitkaBot [268932900 task] messages dump's size if 268932900: 0
+2025-07-28 19:03:58,510 INFO v.s.VisitkaBot [268932900 task] messages dump of 268932900 cleared
+2025-07-28 19:03:58,510 INFO v.s.VisitkaBot [268932900 task] messages dump's size if 268932900: 0
+2025-07-28 19:04:40,682 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 9188 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-28 19:04:40,685 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-28 19:04:42,096 INFO v.Application [main] Started Application in 1.738 seconds (process running for 2.257)
+2025-07-28 19:04:47,648 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал команду /start
+2025-07-28 19:04:49,412 INFO v.s.p.i.InvestPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /invest
+2025-07-28 19:04:49,827 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил свечи по TATNP, количество: 172
+2025-07-28 19:04:49,945 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил информацию по TATNP:
+ TATNP
+Татнефть - привилегированные акции
+619.6
+2025-07-28 19:04:49,952 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил серию баров по TATNP, количество: 172
+2025-07-28 19:04:51,499 ERROR o.t.t.u.DefaultBotSession [vvisitka_bot Telegram Executor] Timer already cancelled.
+java.lang.IllegalStateException: Timer already cancelled.
+	at java.base/java.util.Timer.sched(Timer.java:408) ~[?:?]
+	at java.base/java.util.Timer.schedule(Timer.java:204) ~[?:?]
+	at visitka.utils.TimersManager.scheduleTaskForUser(TimersManager.java:39) ~[classes/:?]
+	at visitka.service.VisitkaBot.processCallback(VisitkaBot.java:139) ~[classes/:?]
+	at visitka.service.VisitkaBot.onUpdateReceived(VisitkaBot.java:66) ~[classes/:?]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[?:?]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.9.0.jar:?]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) [telegrambots-6.9.0.jar:?]
+2025-07-28 19:08:31,650 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 20572 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-28 19:08:31,652 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-28 19:08:33,057 INFO v.Application [main] Started Application in 1.724 seconds (process running for 2.246)
+2025-07-28 19:08:36,544 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал команду /start
+2025-07-28 19:08:38,652 INFO v.s.p.c.CubesPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /cubes
+2025-07-28 19:08:42,220 INFO v.s.p.c.CubesPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /cubes с аргументами [2]
+2025-07-28 19:08:44,226 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start с агрументами [fake]
+2025-07-28 19:08:46,354 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-28 19:08:51,741 INFO v.s.VisitkaBot [268932900 task] messages dump of 268932900 cleared
+2025-07-28 19:08:51,741 INFO v.s.VisitkaBot [268932900 task] messages dump's size if 268932900: 0
+2025-07-28 19:08:56,276 INFO v.s.p.i.InvestPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /invest
+2025-07-28 19:08:56,276 ERROR o.t.t.u.DefaultBotSession [vvisitka_bot Telegram Executor] Index 6 out of bounds for length 5
+java.lang.ArrayIndexOutOfBoundsException: Index 6 out of bounds for length 5
+	at visitka.service.pages.investPage.InvestPage.executeCallback(InvestPage.java:65) ~[classes/:?]
+	at visitka.service.pages.PagesManager.executeCallback(PagesManager.java:62) ~[classes/:?]
+	at visitka.service.VisitkaBot.processCallback(VisitkaBot.java:123) ~[classes/:?]
+	at visitka.service.VisitkaBot.onUpdateReceived(VisitkaBot.java:66) ~[classes/:?]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[?:?]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.9.0.jar:?]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) [telegrambots-6.9.0.jar:?]
+2025-07-28 19:09:15,909 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 17640 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-28 19:09:15,912 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-28 19:09:17,362 INFO v.Application [main] Started Application in 1.788 seconds (process running for 2.309)
+2025-07-28 19:09:19,264 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал команду /start
+2025-07-28 19:09:20,790 INFO v.s.p.c.CubesPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /cubes
+2025-07-28 19:09:22,788 INFO v.s.p.c.CubesPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /cubes с аргументами [2]
+2025-07-28 19:09:25,128 INFO v.s.p.c.CubesPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /cubes с аргументами [2]
+2025-07-28 19:09:26,944 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start с агрументами [fake]
+2025-07-28 19:09:28,194 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-28 19:09:29,752 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [1]
+2025-07-28 19:09:29,752 INFO v.s.p.s.SubsDataBase [vvisitka_bot Telegram Executor] подписался 268932900
+2025-07-28 19:09:31,564 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [0]
+2025-07-28 19:09:31,565 INFO v.s.p.s.SubsDataBase [vvisitka_bot Telegram Executor] отписался 268932900
+2025-07-28 19:09:33,465 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [1]
+2025-07-28 19:09:33,466 INFO v.s.p.s.SubsDataBase [vvisitka_bot Telegram Executor] подписался 268932900
+2025-07-28 19:09:38,558 INFO v.s.VisitkaBot [268932900 task] messages dump of 268932900 cleared
+2025-07-28 19:09:38,558 INFO v.s.VisitkaBot [268932900 task] messages dump's size if 268932900: 0
+2025-07-28 19:09:42,355 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-28 19:09:47,570 INFO v.s.VisitkaBot [268932900 task] messages dump of 268932900 cleared
+2025-07-28 19:09:47,570 INFO v.s.VisitkaBot [268932900 task] messages dump's size if 268932900: 0
+2025-07-28 19:09:49,008 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [0]
+2025-07-28 19:09:49,008 INFO v.s.p.s.SubsDataBase [vvisitka_bot Telegram Executor] отписался 268932900
+2025-07-28 19:09:53,041 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-28 19:09:54,835 ERROR o.t.t.u.DefaultBotSession [vvisitka_bot Telegram Executor] Cannot invoke "utils.pages.interfaces.Page.executeCallback(org.telegram.telegrambots.meta.api.objects.Update)" because the return value of "java.util.Map.get(Object)" is null
+java.lang.NullPointerException: Cannot invoke "utils.pages.interfaces.Page.executeCallback(org.telegram.telegrambots.meta.api.objects.Update)" because the return value of "java.util.Map.get(Object)" is null
+	at visitka.service.pages.PagesManager.executeCallback(PagesManager.java:62) ~[classes/:?]
+	at visitka.service.VisitkaBot.processCallback(VisitkaBot.java:123) ~[classes/:?]
+	at visitka.service.VisitkaBot.onUpdateReceived(VisitkaBot.java:66) ~[classes/:?]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[?:?]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.9.0.jar:?]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) [telegrambots-6.9.0.jar:?]
+2025-07-28 19:09:58,391 INFO v.s.VisitkaBot [268932900 task] messages dump of 268932900 cleared
+2025-07-28 19:09:58,391 INFO v.s.VisitkaBot [268932900 task] messages dump's size if 268932900: 0
+2025-07-28 19:10:01,624 ERROR o.t.t.u.DefaultBotSession [vvisitka_bot Telegram Executor] Cannot invoke "utils.pages.interfaces.Page.executeCallback(org.telegram.telegrambots.meta.api.objects.Update)" because the return value of "java.util.Map.get(Object)" is null
+java.lang.NullPointerException: Cannot invoke "utils.pages.interfaces.Page.executeCallback(org.telegram.telegrambots.meta.api.objects.Update)" because the return value of "java.util.Map.get(Object)" is null
+	at visitka.service.pages.PagesManager.executeCallback(PagesManager.java:62) ~[classes/:?]
+	at visitka.service.VisitkaBot.processCallback(VisitkaBot.java:123) ~[classes/:?]
+	at visitka.service.VisitkaBot.onUpdateReceived(VisitkaBot.java:66) ~[classes/:?]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[?:?]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.9.0.jar:?]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) [telegrambots-6.9.0.jar:?]
+2025-07-28 19:10:20,965 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 14928 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-28 19:10:20,968 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-28 19:10:22,415 INFO v.Application [main] Started Application in 1.765 seconds (process running for 2.283)
+2025-07-28 19:10:25,034 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал команду /start
+2025-07-28 19:10:28,421 INFO v.s.p.i.InvestPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /invest
+2025-07-28 19:10:28,877 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил свечи по GAZP, количество: 174
+2025-07-28 19:10:29,128 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил информацию по GAZP:
+ GAZP
+Газпром
+123.12
+2025-07-28 19:10:29,136 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил серию баров по GAZP, количество: 174
+2025-07-28 19:10:30,364 INFO v.s.VisitkaBot [268932900 task] messages dump of 268932900 cleared
+2025-07-28 19:10:30,364 INFO v.s.VisitkaBot [268932900 task] messages dump's size if 268932900: 0
+2025-07-28 19:10:33,433 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-28 19:10:38,714 INFO v.s.VisitkaBot [268932900 task] messages dump of 268932900 cleared
+2025-07-28 19:10:38,714 INFO v.s.VisitkaBot [268932900 task] messages dump's size if 268932900: 0
+2025-07-28 19:10:40,275 INFO v.s.p.i.InvestPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /invest
+2025-07-28 19:10:40,367 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил свечи по PIKK, количество: 174
+2025-07-28 19:10:40,479 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил информацию по PIKK:
+ PIKK
+ПИК
+601.5
+2025-07-28 19:10:40,482 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил серию баров по PIKK, количество: 174
+2025-07-28 19:10:43,049 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-28 19:10:44,986 INFO v.s.p.c.CubesPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /cubes
+2025-07-28 19:10:50,250 INFO v.s.VisitkaBot [268932900 task] messages dump of 268932900 cleared
+2025-07-28 19:10:50,250 INFO v.s.VisitkaBot [268932900 task] messages dump's size if 268932900: 0
+2025-07-28 19:10:51,676 INFO v.s.p.c.CubesPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /cubes с аргументами [2]
+2025-07-28 19:10:55,287 INFO v.s.p.c.CubesPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /cubes с аргументами [2]
+2025-07-28 19:10:56,976 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start с агрументами [fake]
+2025-07-28 19:10:59,754 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-28 19:11:05,183 INFO v.s.VisitkaBot [268932900 task] messages dump of 268932900 cleared
+2025-07-28 19:11:05,183 INFO v.s.VisitkaBot [268932900 task] messages dump's size if 268932900: 0
+2025-07-28 19:11:09,533 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал команду /start
+2025-07-28 19:11:12,731 INFO v.s.p.c.CubesPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /cubes
+2025-07-28 19:11:14,698 INFO v.s.p.c.CubesPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /cubes с аргументами [2]
+2025-07-28 19:11:17,493 INFO v.s.p.c.CubesPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /cubes с аргументами [2]
+2025-07-28 19:11:20,534 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start с агрументами [fake]
+2025-07-28 19:11:22,624 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-28 19:11:25,446 INFO v.s.p.i.InvestPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /invest
+2025-07-28 19:11:25,528 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил свечи по GAZP, количество: 174
+2025-07-28 19:11:25,631 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил информацию по GAZP:
+ GAZP
+Газпром
+123.15
+2025-07-28 19:11:25,633 INFO v.i.DataLoader [vvisitka_bot Telegram Executor] Получил серию баров по GAZP, количество: 174
+2025-07-28 19:11:27,751 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-28 19:11:29,373 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [1]
+2025-07-28 19:11:29,373 INFO v.s.p.s.SubsDataBase [vvisitka_bot Telegram Executor] подписался 268932900
+2025-07-28 19:11:34,484 INFO v.s.VisitkaBot [268932900 task] messages dump of 268932900 cleared
+2025-07-28 19:11:34,484 INFO v.s.VisitkaBot [268932900 task] messages dump's size if 268932900: 0
+2025-07-28 19:11:47,907 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-28 19:11:53,258 INFO v.s.VisitkaBot [268932900 task] messages dump of 268932900 cleared
+2025-07-28 19:11:53,258 INFO v.s.VisitkaBot [268932900 task] messages dump's size if 268932900: 0
+2025-07-28 19:11:53,639 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [0]
+2025-07-28 19:11:53,640 INFO v.s.p.s.SubsDataBase [vvisitka_bot Telegram Executor] отписался 268932900
+2025-07-28 19:11:57,138 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [1]
+2025-07-28 19:11:57,138 INFO v.s.p.s.SubsDataBase [vvisitka_bot Telegram Executor] подписался 268932900
+2025-07-28 19:11:58,750 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-28 19:12:04,682 INFO v.s.VisitkaBot [268932900 task] messages dump of 268932900 cleared
+2025-07-28 19:12:04,682 INFO v.s.VisitkaBot [268932900 task] messages dump's size if 268932900: 0
+2025-07-28 19:12:06,414 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [0]
+2025-07-28 19:12:06,414 INFO v.s.p.s.SubsDataBase [vvisitka_bot Telegram Executor] отписался 268932900
+2025-07-28 19:12:08,503 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-28 19:12:10,479 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [1]
+2025-07-28 19:12:10,479 INFO v.s.p.s.SubsDataBase [vvisitka_bot Telegram Executor] подписался 268932900
+2025-07-28 19:12:12,232 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [0]
+2025-07-28 19:12:12,233 INFO v.s.p.s.SubsDataBase [vvisitka_bot Telegram Executor] отписался 268932900
+2025-07-28 19:12:13,661 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-28 19:12:14,817 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [1]
+2025-07-28 19:12:14,817 INFO v.s.p.s.SubsDataBase [vvisitka_bot Telegram Executor] подписался 268932900
+2025-07-28 19:12:16,656 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-28 19:12:18,071 INFO v.s.p.s.SubscribePage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /sub с аргуметами [0]
+2025-07-28 19:12:18,071 INFO v.s.p.s.SubsDataBase [vvisitka_bot Telegram Executor] отписался 268932900
+2025-07-28 19:12:20,077 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-28 19:24:26,567 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 10984 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-28 19:24:26,570 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-28 19:24:28,310 INFO v.Application [main] Started Application in 2.188 seconds (process running for 2.827)
+2025-07-28 19:24:36,929 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал команду /start
+2025-07-28 19:24:39,599 INFO v.s.p.c.CubesPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /cubes
+2025-07-28 19:24:39,819 ERROR o.t.t.u.DefaultBotSession [vvisitka_bot Telegram Executor] Task already scheduled or cancelled
+java.lang.IllegalStateException: Task already scheduled or cancelled
+	at java.base/java.util.Timer.sched(Timer.java:412) ~[?:?]
+	at java.base/java.util.Timer.schedule(Timer.java:204) ~[?:?]
+	at visitka.utils.TimersManager.scheduleTaskForUser(TimersManager.java:39) ~[classes/:?]
+	at visitka.service.VisitkaBot.processCallback(VisitkaBot.java:139) ~[classes/:?]
+	at visitka.service.VisitkaBot.onUpdateReceived(VisitkaBot.java:66) ~[classes/:?]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[?:?]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.9.0.jar:?]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) [telegrambots-6.9.0.jar:?]
+2025-07-28 19:24:42,344 INFO v.s.VisitkaBot [268932900 task] messages dump of 268932900 cleared
+2025-07-28 19:24:42,344 INFO v.s.VisitkaBot [268932900 task] messages dump's size if 268932900: 0
+2025-07-28 19:25:02,880 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 7420 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-28 19:25:02,882 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-28 19:25:04,296 INFO v.Application [main] Started Application in 1.735 seconds (process running for 2.253)
+2025-07-28 19:25:06,755 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал команду /start
+2025-07-28 19:25:08,113 INFO v.s.p.c.CubesPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /cubes
+2025-07-28 19:25:09,056 ERROR o.t.t.u.DefaultBotSession [vvisitka_bot Telegram Executor] Task already scheduled or cancelled
+java.lang.IllegalStateException: Task already scheduled or cancelled
+	at java.base/java.util.Timer.sched(Timer.java:412) ~[?:?]
+	at java.base/java.util.Timer.schedule(Timer.java:204) ~[?:?]
+	at visitka.utils.TimersManager.scheduleTaskForUser(TimersManager.java:39) ~[classes/:?]
+	at visitka.service.VisitkaBot.processCallback(VisitkaBot.java:139) ~[classes/:?]
+	at visitka.service.VisitkaBot.onUpdateReceived(VisitkaBot.java:66) ~[classes/:?]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[?:?]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.9.0.jar:?]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) [telegrambots-6.9.0.jar:?]
+2025-07-28 19:25:12,121 INFO v.s.VisitkaBot [268932900 task] messages dump of 268932900 cleared
+2025-07-28 19:25:12,121 INFO v.s.VisitkaBot [268932900 task] messages dump's size if 268932900: 0
+2025-07-28 19:25:31,500 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 10384 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-28 19:25:31,503 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-28 19:25:32,911 INFO v.Application [main] Started Application in 1.727 seconds (process running for 2.244)
+2025-07-28 19:25:36,219 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал команду /start
+2025-07-28 19:25:41,574 INFO v.s.VisitkaBot [268932900 task] messages dump of 268932900 cleared
+2025-07-28 19:25:41,574 INFO v.s.VisitkaBot [268932900 task] messages dump's size if 268932900: 0
+2025-07-28 19:25:43,943 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал команду /start
+2025-07-28 19:25:44,385 ERROR o.t.t.u.DefaultBotSession [vvisitka_bot Telegram Executor] Task already scheduled or cancelled
+java.lang.IllegalStateException: Task already scheduled or cancelled
+	at java.base/java.util.Timer.sched(Timer.java:412) ~[?:?]
+	at java.base/java.util.Timer.schedule(Timer.java:204) ~[?:?]
+	at visitka.utils.TimersManager.scheduleTaskForUser(TimersManager.java:40) ~[classes/:?]
+	at visitka.service.VisitkaBot.processMessage(VisitkaBot.java:102) ~[classes/:?]
+	at visitka.service.VisitkaBot.onUpdateReceived(VisitkaBot.java:64) ~[classes/:?]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[?:?]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.9.0.jar:?]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) [telegrambots-6.9.0.jar:?]
+2025-07-28 19:26:38,234 INFO v.Application [main] Starting Application using Java 24.0.1 with PID 18612 (C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka\target\classes started by evgeh in C:\Users\evgeh\Desktop\кодер)0\java проекты\BotVisitka)
+2025-07-28 19:26:38,236 INFO v.Application [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-28 19:26:39,627 INFO v.Application [main] Started Application in 1.71 seconds (process running for 2.223)
+2025-07-28 19:26:42,152 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал команду /start
+2025-07-28 19:26:47,572 INFO v.s.VisitkaBot [268932900 task] messages dump of 268932900 cleared
+2025-07-28 19:26:47,572 INFO v.s.VisitkaBot [268932900 task] messages dump's size if 268932900: 0
+2025-07-28 19:26:49,085 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал команду /start
+2025-07-28 19:26:53,788 INFO v.s.p.c.CubesPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /cubes
+2025-07-28 19:26:54,503 INFO v.s.VisitkaBot [268932900 task] messages dump of 268932900 cleared
+2025-07-28 19:26:54,503 INFO v.s.VisitkaBot [268932900 task] messages dump's size if 268932900: 0
+2025-07-28 19:26:56,361 INFO v.s.p.c.CubesPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /cubes с аргументами [2]
+2025-07-28 19:26:58,711 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start с агрументами [fake]
+2025-07-28 19:27:00,376 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-28 19:27:05,572 INFO v.s.VisitkaBot [268932900 task] messages dump of 268932900 cleared
+2025-07-28 19:27:05,572 INFO v.s.VisitkaBot [268932900 task] messages dump's size if 268932900: 0
+2025-07-28 19:27:06,943 INFO v.s.p.c.CubesPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /cubes
+2025-07-28 19:27:09,401 INFO v.s.p.c.CubesPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /cubes с аргументами [2]
+2025-07-28 19:27:11,907 INFO v.s.p.c.CubesPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /cubes с аргументами [2]
+2025-07-28 19:27:17,249 INFO v.s.VisitkaBot [268932900 task] messages dump of 268932900 cleared
+2025-07-28 19:27:17,249 INFO v.s.VisitkaBot [268932900 task] messages dump's size if 268932900: 0
+2025-07-28 19:27:18,710 INFO v.s.p.c.CubesPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /cubes с аргументами [2]
+2025-07-28 19:27:20,561 INFO v.s.p.c.CubesPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /cubes с аргументами [2]
+2025-07-28 19:27:22,956 INFO v.s.p.c.CubesPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /cubes с аргументами [2]
+2025-07-28 19:27:26,077 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start с агрументами [fake]
+2025-07-28 19:27:27,961 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start
+2025-07-28 19:27:30,202 INFO v.s.p.c.CubesPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /cubes
+2025-07-28 19:27:31,422 INFO v.s.p.c.CubesPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /cubes с аргументами [2]
+2025-07-28 19:27:32,822 INFO v.s.p.c.CubesPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /cubes с аргументами [2]
+2025-07-28 19:27:33,794 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start с агрументами [fake]
+2025-07-28 19:27:36,106 INFO v.s.p.s.StartPage [vvisitka_bot Telegram Executor] ya_tut_babo4ka вызвал через кнопку команду /start

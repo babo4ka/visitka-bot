@@ -62,7 +62,7 @@ public class InvestPage implements Page {
         InlineKeyboardBuilder keyboardBuilder = new InlineKeyboardBuilder();
         keyboardBuilder = keyboardBuilder.addButton(Emoji.UNAMUSED.emoji() + " На главную", "/start").nextRow();
 
-        String ticker = tickers[random.nextInt(0 ,7)];
+        String ticker = tickers[random.nextInt(0 ,5)];
 
         String info;
         var candles = dataLoader.loadCandlesData(ticker);

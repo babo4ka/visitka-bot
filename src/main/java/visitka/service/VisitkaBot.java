@@ -1,5 +1,7 @@
 package visitka.service;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -20,6 +22,7 @@ import visitka.config.BotConfig;
 import visitka.service.pages.PagesManager;
 import visitka.service.pages.subscribePage.SubsDataBase;
 import visitka.utils.Emoji;
+import visitka.utils.TimersManager;
 
 import java.util.Arrays;
 import java.util.List;
@@ -29,6 +32,8 @@ import java.util.List;
 public class VisitkaBot extends TelegramLongPollingBot {
 
     final BotConfig config;
+
+    final Logger logger = LogManager.getLogger();
 
     @Override
     public String getBotUsername() {
@@ -47,6 +52,8 @@ public class VisitkaBot extends TelegramLongPollingBot {
     PagesManager pageManager;
 
     ManyUsersMessagesDump messagesDump = new ManyUsersMessagesDump();
+
+    TimersManager timersManager = new TimersManager(this::clearDump);
 
 
     @Override
@@ -90,8 +97,10 @@ public class VisitkaBot extends TelegramLongPollingBot {
             if(message.getFirst() instanceof SendMessage) msg = execute((SendMessage) message.getFirst());
             else if(message.getFirst() instanceof SendPhoto) msg = execute((SendPhoto) message.getFirst());
 
-            if(message.getSecond())
+            if(message.getSecond()) {
                 messagesDump.addMessage(msg, update.getMessage().getChatId());
+                timersManager.scheduleTaskForUser(update.getMessage().getChatId());
+            }
         }
     }
 
@@ -125,8 +134,10 @@ public class VisitkaBot extends TelegramLongPollingBot {
             else if(message.getFirst() instanceof SendPhoto) msg = execute((SendPhoto) message.getFirst());
             else if (message.getFirst() instanceof SendDice) msg = execute((SendDice) message.getFirst());
 
-            if(message.getSecond())
+            if(message.getSecond()) {
                 messagesDump.addMessage(msg, update.getCallbackQuery().getMessage().getChatId());
+                timersManager.scheduleTaskForUser(update.getCallbackQuery().getMessage().getChatId());
+            }
         }
     }
 
@@ -134,16 +145,25 @@ public class VisitkaBot extends TelegramLongPollingBot {
     private void deletePreviousMessages(long chatId) {
         List<DeleteMessage> messages = messagesDump.getMessagesById(chatId);
         if (messages != null) {
-            messages.forEach(msg -> {
-                try {
-                    execute(msg);
-                } catch (TelegramApiException e) {
-                    throw new RuntimeException(e);
-                }
-            });
+            if(!messages.isEmpty()) {
+                messages.forEach(msg -> {
+                    try {
+                        execute(msg);
+                    } catch (TelegramApiException e) {
+                        throw new RuntimeException(e);
+                    }
+                });
 
-            messagesDump.clearDump(chatId);
+                messagesDump.clearDump(chatId);
+            }
         }
+    }
+
+    private void clearDump(long chatId){
+        messagesDump.clearDump(chatId);
+        logger.info("messages dump of {} cleared", chatId);
+        int s = messagesDump.getMessagesById(chatId).size();
+        logger.info("messages dump's size if {}: {}", chatId, s);
     }
 
     @Scheduled(fixedRate = 15000)
